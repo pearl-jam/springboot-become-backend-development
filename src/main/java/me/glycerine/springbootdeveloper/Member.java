@@ -1,4 +1,4 @@
-package me.glycerine;
+package me.glycerine.springbootdeveloper;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

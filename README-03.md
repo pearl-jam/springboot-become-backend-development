@@ -37,8 +37,36 @@
 
 #### 3.1.3 main 디렉터리 구성하기
 
-1단계. main/resources/templates 디렉토리 생성
-2단계. main/resources/static 디렉토리 생성
-3단계. main/resources/application.yml 파일 생성
+1. main/resources/templates 디렉토리 생성
+2. main/resources/static 디렉토리 생성
+3. main/resources/application.yml 파일 생성
 
+### 3.2 스프리으 부트 3 프로젝트 발전시키기
 
+의존성을 추가한 다음 프레젠테이션 계층, 비즈니스 계층, 퍼시스턴스 계층 순서대로 코드 추가
+
+#### 3.2.1 build.gradle 에 의존성 추가히기
+
+1. 스프링 부트용 JPA 인 스프링 데이터 JPA, 로컬 환경과 테스트 환경에서 사용할 인메모리 데이터베이스인 H2, 반복 메서드 작성 작업을 줄여주는 라이브러리인 롬복 추가
+2. [Gradle] 탭에서 새로고침 버튼을 누르면서 앞서 추가한 의존성을 다운로드
+
+#### 3.2.2 프레젠테이션, 서비스, 퍼시스턴스 계층 만들기
+
+1. 프리젠테이션 계층 - TestController.java 클래스 
+2. 비즈니스 계층 - TestService.java 클래스
+3. 퍼시스턴트 계층 - Member.java 클래스
+4. 퍼시스턴트 계층 - MemberRepository.java 인터페이스
+
+#### 3.2.3 임포트 오류 처리하기
+
+Alt+Enter 누른 후 [Import class]
+
+#### 3.2.4 작동 확인
+
+* 지금의 경우 결과물을 볼 수 있는 데이터가 데이터베이스에 하나도 입력되지 않은 상태
+* 인메모리 데이터베이스를 사용하고 있기 때문에 애플리케이션을 실행할 때 원하는 데이터를 자동으로 넣는 작업 진행
+
+1. resources 디렉터리에 data.sql 파일을 생성하고 INSERT 쿼리문 작성
+2. application.yml jpa 옵션 수정
+3. 빌드 후 CREATE TABLE 확인
+4. 포스트맨으로 HTTP 요청 시도 (http://localhost:8080/test)
