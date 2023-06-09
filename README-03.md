@@ -70,3 +70,14 @@ Alt+Enter 누른 후 [Import class]
 2. application.yml jpa 옵션 수정
 3. 빌드 후 CREATE TABLE 확인
 4. 포스트맨으로 HTTP 요청 시도 (http://localhost:8080/test)
+
+### 3.3 스프링 부트 요청-응답 과정 한 방에 이해하기
+
+* 스프링 부트로 만든 애플리케이션에서 HTTP 요청이 오면 어떤 과정을 거치며 실행되고 응답하는지 확인
+
+1. 포스트맨에서 톰캣에 /test GET 요청
+2. 스프링 부트의 디스패처 서블릿이 URL 분석하고 요청을 처리할 수 있는 컨트롤로 확인 (TestController 가 /test 라는 패스에 대한 GET 요청을 처리할 수 있는 getAllMembers() 메서드를 가지고 있으므로 요청을 전달)
+3. /test GET 요청을 처리할 수 있는 getAllMembers() 메서드와 이 요청이 매치 (getAllMembers() 메서드에서는 비즈니스 계층과 퍼시스턴스 계층을 통하면서 필요한 데이터 처리)
+4. 뷰 리졸버는 템플릿 엔진을 사용해 HTML 문서를 만들거나 JSON, XML 등의 데이터 생성
+5. 결과 members 를 return 하고 데이터를 조회
+
