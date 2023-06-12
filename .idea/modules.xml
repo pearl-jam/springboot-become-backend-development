@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/me.glycerine.springboot-become-backend-development.main.iml" filepath="$PROJECT_DIR$/.idea/modules/me.glycerine.springboot-become-backend-development.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/springboot-become-backend-development.main.iml" filepath="$PROJECT_DIR$/.idea/modules/springboot-become-backend-development.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springboot-become-backend-development.test.iml" filepath="$PROJECT_DIR$/.idea/modules/springboot-become-backend-development.test.iml" />
     </modules>
   </component>
 </project>
