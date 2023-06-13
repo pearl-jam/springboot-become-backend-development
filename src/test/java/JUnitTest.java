@@ -3,13 +3,24 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class JUnitTest {
-    @DisplayName("1 + 2? 3??") // ??? ??
+
+    @DisplayName("1 + 2? 3??")
     @Test
     public void junitTest() {
         int a = 1;
         int b = 2;
         int sum = 3;
 
-        Assertions.assertEquals(a + b, sum); // ?? ??? ??
+        Assertions.assertEquals(a + b, sum);
     }
+
+//    @DisplayName("1 + 3? 4??")
+//    @Test
+//    public void junitFailedTest() {
+//        int a = 1;
+//        int b = 3;
+//        int sum = 3;
+//
+//        Assertions.assertEquals(a + b, sum);
+//    }
 }
