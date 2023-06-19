@@ -109,4 +109,42 @@
     * Then: 응답코드가 201 Created 인지 확인. Blog 를 전체 조회해 크기가 1인지 확인하고, 실제로 저장된 데이터와 요청 값 비교
 3. 테스트 코드 실행하여 코드가 잘 동작하는지 확인
 
+### 6.4 블로그 글 목록 조회를 위한 API 구현하기
+
+* 모든 글을 조회하는 API, 글 내용을 조회하는 API를 순서대로 구현
+
+#### 6.4.1 서비스 메서드 코드 작성하기
+
+1. BlogService.java findAll() 메서드 추가
+
+#### 6.4.2 컨트롤러 메서드 코드 작성하기
+
+* /api/articles GET 요청이 오면 글 목록을 조회할 findAllArticles() 메서드 작성
+* 이 메서드는 전체 글 목록을 조회하고 응답하는 역할
+
+1. dto 패키지에 ArticleResponse.java 파일 생성
+2. BlogApiController.java findAllArticles() 메서드 추가
+
+#### 6.4.3 실행 테스트하기
+
+1. 테스트를 위해 data.sql 생성 (INSERT)
+2. 포트트맨을 열고 http://localhost:8080/api/articles 확인
+
+#### 6.4.4 테스트 코드 작성하기
+
+1. BlogApiControllerTest.java
+
+### 6.5 블로그 글 조회 API 구현하기
+
+#### 6.5.1 서비스 메서드 코드 작성하기
+
+1. BlogService.java findById() 메서드 추가
+
+#### 6.5.2 컨트롤러 메서드 코드 작성하기
+
+1. BlogApiController.java /api/articles/{id} GET 요청이 오면 조회하기 위해 매핑할 findArticle() 메서드 추가
+
+#### 6.5.3 테스트 코드 작성하기
+
+1. BlogApiControllerTest.java
 
