@@ -128,7 +128,7 @@
 #### 6.4.3 실행 테스트하기
 
 1. 테스트를 위해 data.sql 생성 (INSERT)
-2. 포트트맨을 열고 http://localhost:8080/api/articles 확인
+2. 포스트맨을 열고 http://localhost:8080/api/articles 확인
 
 #### 6.4.4 테스트 코드 작성하기
 
@@ -145,6 +145,46 @@
 1. BlogApiController.java /api/articles/{id} GET 요청이 오면 조회하기 위해 매핑할 findArticle() 메서드 추가
 
 #### 6.5.3 테스트 코드 작성하기
+
+1. BlogApiControllerTest.java
+
+### 6.6 블로그 글 삭제 API 구현하기
+
+#### 6.6.1 서비스 메서드 코드 작성하기
+
+1. BlogService.java delete() 메서드 추가
+
+#### 6.6.2 컨트롤러 메서드 코드 작성하기
+
+1. BlogApiController.java /api/articles/{id} DELETE 요청이 오면 삭제하기 위한 findArticles() 메서드 추가
+
+#### 6.6.3 실행 테스트하기
+
+1. 포스트맨에서 DELETE 로 HTTP 메서드 설정하고 http://localhost:8080/api/articles/1 입력
+2. 포스트맨에서 GET 으로 HTTP 메서드 설정하고 http://localhost:8080/api/articles 입력하여 삭제 확인
+
+#### 6.6.4 테스트 코드 작성하기
+
+1. BlogApiControllerTest.java
+
+### 6.7 블로그 글 수정 API 구현하기
+
+#### 6.7.1 서비스 메서드 코드 작성하기
+
+1. Article.java 엔티티에 요청받은 내용으로 값을 수정하는 메서드를 작성
+2. dto 디렉터리에 UpdateArticleRequest.java 파일 생성
+3. BlogService.java 글을 수정하는 update() 메서드 추가
+
+#### 6.7.2 컨트롤러 메서드 코드 작성하기
+
+1. BlogApiController.java /api/articles/{id} PUT 요청이 오면 수정하기 위한 updateArticle() 메서드 추가
+
+#### 6.7.3 실행 테스트하기
+
+1. 포스트맨에서 PUT 으로 HTTP 메서드 설정하고 http://localhost:8080/api/articles/1 입력
+2. 포스트맨에서 GET 으로 HTTP 메서드 설정하고 http://localhost:8080/api/articles 입력하여 수정된 글 조회
+
+#### 6.7.4 테스트 코드 작성하기
 
 1. BlogApiControllerTest.java
 
