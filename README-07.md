@@ -42,3 +42,18 @@
 #### 7.1.5 뷰 테스트 하기
 
 1. http://localhost:8080/thymeleaf/example 접속
+
+### 7.2 블로그 글 목록 뷰 구현하기
+
+#### 7.2.1 컨트롤러 메서드 작성하기
+
+* 요청을 받아 사용자에게 뷰를 보여주려면 뷰 컨트롤러가 필요
+* 뷰 컨트롤러 메서드는 뷰의 이름을 반환하고, 모델 객체에 값을 처리
+
+1. dto 패키지에 ArticleListViewResponse.java 파일 생성
+2. controller 패키지에 BlogViewController.java 파일 생성
+
+#### 7.2.2 HTML 뷰 만들고 테스트하기
+
+1. resource/templates 디렉터리에 articleList.html 만들고 모델에 전달한 블로그 글 리스트 개수만큼 반복해 글 정보를 보여주는 코드 작성
+2. http://localhost:8080/articles 접속
