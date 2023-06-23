@@ -79,3 +79,14 @@
 #### 7.3.4 실행 테스트하기
 
 1. http://localhost:8080/articles 접속
+
+### 7.4 삭제 기능 추가하기
+
+#### 7.4.1 삭제 기능 코드 작성하기
+
+1. src/main/resources/static 디렉토리에 js 디렉토리를 만들고 article.js 파일 생성
+2. article.html 에 article.js 임포트
+
+#### 7.4.2 실행 테스트하기
+
+1. http://localhost:8080/articles/1 접속 후 삭제 테스트
