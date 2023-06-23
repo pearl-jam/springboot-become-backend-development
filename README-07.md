@@ -57,3 +57,25 @@
 
 1. resource/templates 디렉터리에 articleList.html 만들고 모델에 전달한 블로그 글 리스트 개수만큼 반복해 글 정보를 보여주는 코드 작성
 2. http://localhost:8080/articles 접속
+
+### 7.3 블로그 글 뷰 구현하기
+
+#### 7.3.1 엔티티에 생성, 수정 시간 추가하기
+
+1. Article.java 필드 추가
+2. data.sql 수정
+3. SpringBootDeveloperApplication.java created_At, updated_at 자동 업데이트를 위한 애너테이션 추가
+
+#### 7.3.2 컨트롤러 메서드 작성하기
+
+1. ArticleViewResponse.java 생성
+2. BlogViewController.java getArticle() 메서드 추가
+
+#### 7.3.3 HTML 뷰 만들기
+
+1. resource/templates 디렉터리에 article.html 생성
+2. articleList.html 보러 가기 링크 수정
+
+#### 7.3.4 실행 테스트하기
+
+1. http://localhost:8080/articles 접속
