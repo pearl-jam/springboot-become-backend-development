@@ -90,3 +90,19 @@
 #### 7.4.2 실행 테스트하기
 
 1. http://localhost:8080/articles/1 접속 후 삭제 테스트
+
+### 7.5 수정/생성 기능 추가하기
+
+#### 7.5.1 수정/생성 뷰 컨트롤러 작성하기
+
+1. BlogViewController.java newArticle() 메서드 추가
+
+#### 7.5.2 수정/생성 뷰 만들기
+
+1. resource/templates 디렉터리에 newArticle.html 생성
+2. static 디렉터리에 article.js 이벤트 처리 추가
+3. article.html 클릭 이벤트 추가
+
+#### 7.5.3 실행 테스트하기
+
+1. http://localhost:8080/articles/1 접속 후 수정 테스트
