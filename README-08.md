@@ -57,3 +57,6 @@
 
 1. service 디렉터리에 UserDetailService.java 파일 생성
 
+### 8.3 시큐리티 설정하기
+
+1. config 패키지를 만들어 WebSecurityConfig.java 파일 생성
