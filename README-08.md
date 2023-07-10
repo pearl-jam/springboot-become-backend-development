@@ -88,3 +88,33 @@
 
 1. templates 디렉터리에 login.html 파일 생성
 2. templates 디렉터리에 signup.html 파일 생성
+
+### 8.6 로그아웃 구현하기
+
+* 로그아웃 기능 구현하고, 회원 가입, 로그인, 로그아웃 테스트
+
+### 8.6.1 로그아웃 메서드 추가하기
+
+1. UserApiController.java 파일에 logout() 메서드 추가
+
+### 8.6.2 로그아웃 뷰 추가하기
+
+1. articleList.html 파일에 [로그아웃] 버튼 추가
+
+### 8.7 실행 테스트하기
+
+### 8.7.1 테스트를 위한 환경 변수 추가하기
+
+1. application.yml 환경 변수 추가
+
+### 8.7.2 로그인, 회원 가입 실행 테스트하기
+
+1. http://localhost:8080/articles 접근하면 로그인 페이지인 /login 으로 리다일게트
+2. http://localhost:8080/signup 접근하여 회원 가입 진행
+3. 회원 가입이 끝나면 로그인 페이지로 이동, 로그인 후 글 목록 페이지로 이동
+4. http://localhost:8080/h2-console 접속 한뒤 H2 콘솔에 접속
+5. SELECT * FROM users 쿼리하여 사용자 정보 조회
+
+### 8.7.3 로그아웃 실행 테스트하기
+
+1. /logout 으로 이동하거나 [로그아웃] 버튼 클릭
