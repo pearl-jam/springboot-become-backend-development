@@ -19,4 +19,4 @@ spring:
 
 jwt:
   issuser: glycerine@live.co.kr
-  secret_ke: study-springboot
+  secret_key: study-springboot
